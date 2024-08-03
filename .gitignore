@@ -18,9 +18,10 @@ timeline.xctimeline
 playground.xcworkspace
 
 ## Other
-*.DS_Store
-*.xcworkspace
 Build/
+*.DS_Store
+*.pbxproj
+*.xcworkspace
 *.xcuserstate
 
 # Swift Package Manager

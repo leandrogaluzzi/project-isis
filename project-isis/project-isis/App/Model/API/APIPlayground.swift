@@ -11,7 +11,6 @@ struct APIPlayground: Decodable {
 extension APIPlayground {
     func toModel() -> Playground? {
         guard let lat, let lon else { return nil }
-        debugPrint(type)
         return Playground(
             id: id,
             coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon)
