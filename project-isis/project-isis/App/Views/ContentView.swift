@@ -4,22 +4,34 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var store: MainStore
 
+    @State private var isShowingGetStarted: Bool = true
+
     private struct Props {
-        let selectedPlayground: Playground?
+        let isGetStatedVisible: Bool
     }
 
     private func map(state: MainState) -> Props {
         Props(
-            selectedPlayground: state.selectedPlayground
+            isGetStatedVisible: state.isGetStartedVisble
         )
     }
 
     var body: some View {
-        let _ = map(state: store.state)
+        let props = map(state: store.state)
 
-        ZStack(alignment: .bottom) {
-            MapView()
-            PlaygroundView()
+        VStack {
+            if isShowingGetStarted {
+                GetStartedView()
+                    .transition(.opacity)
+            } else {
+                MainView()
+                    .transition(.opacity)
+            }
+        }
+        .onChange(of: props.isGetStatedVisible) { oldValue, newValue in
+            withAnimation {
+                isShowingGetStarted = newValue
+            }
         }
     }
 }

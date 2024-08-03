@@ -36,6 +36,9 @@
 		E51022A72C5EAB37006FAF8B /* MainStore+Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E510228C2C5EAB37006FAF8B /* MainStore+Stubs.swift */; };
 		E51022A82C5EAB37006FAF8B /* MapState+Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E510228D2C5EAB37006FAF8B /* MapState+Stubs.swift */; };
 		E51022A92C5EAB37006FAF8B /* Playground+Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E510228E2C5EAB37006FAF8B /* Playground+Stubs.swift */; };
+		E51022AE2C5EC386006FAF8B /* GetStartedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51022AD2C5EC386006FAF8B /* GetStartedView.swift */; };
+		E51022B02C5EC658006FAF8B /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51022AF2C5EC658006FAF8B /* DesignSystem.swift */; };
+		E51022B22C5ECBFB006FAF8B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51022B12C5ECBFB006FAF8B /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +72,9 @@
 		E510228C2C5EAB37006FAF8B /* MainStore+Stubs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainStore+Stubs.swift"; sourceTree = "<group>"; };
 		E510228D2C5EAB37006FAF8B /* MapState+Stubs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MapState+Stubs.swift"; sourceTree = "<group>"; };
 		E510228E2C5EAB37006FAF8B /* Playground+Stubs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Playground+Stubs.swift"; sourceTree = "<group>"; };
+		E51022AD2C5EC386006FAF8B /* GetStartedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedView.swift; sourceTree = "<group>"; };
+		E51022AF2C5EC658006FAF8B /* DesignSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		E51022B12C5ECBFB006FAF8B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,7 @@
 		E51022682C5EAB37006FAF8B /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				E51022AF2C5EC658006FAF8B /* DesignSystem.swift */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -270,6 +277,8 @@
 		E510228A2C5EAB37006FAF8B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E51022B42C5ECD1A006FAF8B /* Main */,
+				E51022B32C5ECCF4006FAF8B /* GetStarted */,
 				E51022832C5EAB37006FAF8B /* Map */,
 				E51022862C5EAB37006FAF8B /* Playground */,
 				E51022882C5EAB37006FAF8B /* ViewModifiers */,
@@ -300,6 +309,22 @@
 				E51022612C5EAB0D006FAF8B /* MainApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		E51022B32C5ECCF4006FAF8B /* GetStarted */ = {
+			isa = PBXGroup;
+			children = (
+				E51022AD2C5EC386006FAF8B /* GetStartedView.swift */,
+			);
+			path = GetStarted;
+			sourceTree = "<group>";
+		};
+		E51022B42C5ECD1A006FAF8B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E51022B12C5ECBFB006FAF8B /* MainView.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,6 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E51022B02C5EC658006FAF8B /* DesignSystem.swift in Sources */,
 				E51022A82C5EAB37006FAF8B /* MapState+Stubs.swift in Sources */,
 				E51022952C5EAB37006FAF8B /* MainState.swift in Sources */,
 				E51022A22C5EAB37006FAF8B /* LookAround.swift in Sources */,
@@ -384,6 +410,7 @@
 				E51022A32C5EAB37006FAF8B /* PlaygroundView.swift in Sources */,
 				E510229A2C5EAB37006FAF8B /* APIPlayground.swift in Sources */,
 				E51022A02C5EAB37006FAF8B /* MapView.swift in Sources */,
+				E51022B22C5ECBFB006FAF8B /* MainView.swift in Sources */,
 				E510229B2C5EAB37006FAF8B /* Playground.swift in Sources */,
 				E51022A92C5EAB37006FAF8B /* Playground+Stubs.swift in Sources */,
 				E510229D2C5EAB37006FAF8B /* APIClient.swift in Sources */,
@@ -399,6 +426,7 @@
 				E51022A12C5EAB37006FAF8B /* PlaygroundPin.swift in Sources */,
 				E51022922C5EAB37006FAF8B /* FetchPlaygrounds.swift in Sources */,
 				E51022932C5EAB37006FAF8B /* MainReducer.swift in Sources */,
+				E51022AE2C5EC386006FAF8B /* GetStartedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

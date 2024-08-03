@@ -1,5 +1,7 @@
 import Foundation
 
+struct GetStartedAction: ReduxAction {}
+
 struct ErrorFetchingPlaygroundsAction: ReduxAction {}
 
 struct FetchPlaygroundsAction: ReduxAction {}
