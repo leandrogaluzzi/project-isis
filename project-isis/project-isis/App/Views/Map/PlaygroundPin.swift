@@ -19,14 +19,19 @@ struct PlaygroundPin: View {
     }
 
     var body: some View {
-        let props = map(state: store.state)
+        let _ = map(state: store.state)
 
-        Circle()
-            .frame(width: 20, height: 20)
-            .foregroundColor(.red)
-            .onTapGesture {
-                props.onTap()
-            }
+        ZStack(alignment: .center) {
+            Circle()
+                .fill(DesignSystem.Colors.white)
+                .frame(width: 28, height: 28)
+            Circle()
+                .fill(DesignSystem.Colors.green01)
+                .frame(width: 24, height: 24)
+            Image(.swingIcon)
+                .resizable()
+                .frame(width: 16, height: 16)
+        }
     }
 }
 

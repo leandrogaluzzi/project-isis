@@ -11,9 +11,7 @@ struct ContentView: View {
     }
 
     private func map(state: MainState) -> Props {
-        Props(
-            isGetStatedVisible: state.isGetStartedVisble
-        )
+        Props(isGetStatedVisible: state.isGetStartedVisble)
     }
 
     var body: some View {

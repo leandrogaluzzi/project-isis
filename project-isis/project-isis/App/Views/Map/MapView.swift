@@ -41,9 +41,7 @@ struct MapView: View {
                         PlaygroundPin(playground: playground)
                             .environmentObject(store)
                     },
-                    label: {
-                        EmptyView()
-                    }
+                    label: { EmptyView() }
                 )
             }
         }
