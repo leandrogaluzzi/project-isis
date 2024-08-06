@@ -4,16 +4,27 @@ import SwiftUI
 struct PlaygroundView: View {
     @EnvironmentObject var store: MainStore
 
-    private struct Props {}
+    private struct Props {
+        let onDisappear: () -> Void
+    }
 
     private func map(state: MainState) -> Props {
-        Props()
+        Props(
+            onDisappear: {
+                store.dispatch(DeselectPlaygroundAction())
+            }
+        )
     }
 
     var body: some View {
-        let _ = map(state: store.state)
+        let props = map(state: store.state)
 
-        LookAround()
+        VStack {
+            Text("PLAYGROUND")
+        }
+        .onDisappear {
+            props.onDisappear()
+        }
     }
 }
 

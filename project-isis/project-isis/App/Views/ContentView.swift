@@ -26,7 +26,7 @@ struct ContentView: View {
                     .transition(.opacity)
             }
         }
-        .onChange(of: props.isGetStatedVisible) { oldValue, newValue in
+        .onChange(of: props.isGetStatedVisible) { _, newValue in
             withAnimation {
                 isShowingGetStarted = newValue
             }

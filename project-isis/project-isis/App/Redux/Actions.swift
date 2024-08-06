@@ -1,10 +1,12 @@
 import Foundation
 
-struct GetStartedAction: ReduxAction {}
+struct DeselectPlaygroundAction: ReduxAction {}
 
 struct ErrorFetchingPlaygroundsAction: ReduxAction {}
 
 struct FetchPlaygroundsAction: ReduxAction {}
+
+struct GetStartedAction: ReduxAction {}
 
 struct SelectPlaygroundAction: ReduxAction {
     let playground: Playground

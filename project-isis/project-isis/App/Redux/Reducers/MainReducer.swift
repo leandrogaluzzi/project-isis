@@ -4,6 +4,8 @@ func mainReducer(state: MainState, action: ReduxAction) -> MainState {
     var state = state
     state.mapState = mapReducer(state: state.mapState, action: action)
     switch action {
+    case _ as DeselectPlaygroundAction:
+        state.selectedPlayground = nil
     case _ as GetStartedAction:
         state.isGetStartedVisble = false
     case let action as SelectPlaygroundAction:

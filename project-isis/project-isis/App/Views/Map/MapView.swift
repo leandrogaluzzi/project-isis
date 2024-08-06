@@ -53,7 +53,6 @@ struct MapView: View {
         }
         .onFirstAppear {
             props.onAppear()
-            
         }
     }
 }

@@ -7,11 +7,16 @@ struct PlaygroundPin: View {
     let playground: Playground
 
     private struct Props {
+        let isPlaygroundSelected: Bool
         let onTap: () -> Void
     }
 
     private func map(state: MainState) -> Props {
         Props(
+            isPlaygroundSelected: isPlaygroundSelectedSelector(
+                state: state, 
+                playground: playground
+            ),
             onTap: {
                 store.dispatch(SelectPlaygroundAction(playground: playground))
             }
@@ -19,7 +24,7 @@ struct PlaygroundPin: View {
     }
 
     var body: some View {
-        let _ = map(state: store.state)
+        let props = map(state: store.state)
 
         ZStack(alignment: .center) {
             Circle()
@@ -31,6 +36,9 @@ struct PlaygroundPin: View {
             Image(.swingIcon)
                 .resizable()
                 .frame(width: 16, height: 16)
+        }
+        .onTapGesture {
+            props.onTap()
         }
     }
 }
