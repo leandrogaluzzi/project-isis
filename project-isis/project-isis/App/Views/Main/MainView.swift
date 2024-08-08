@@ -32,8 +32,7 @@ struct MainView: View {
                 .presentationDetents(
                     [
                         .fraction(0.2),
-                        .medium,
-                        .large
+                        .fraction(0.95)
                     ]
                 )
         }

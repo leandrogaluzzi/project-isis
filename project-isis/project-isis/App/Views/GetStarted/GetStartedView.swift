@@ -29,7 +29,11 @@ struct GetStartedView: View {
             Button {
                 props.onTapGetStarted()
             } label: {
-                button()
+                RoundedButton(
+                    text: "Get Started",
+                    textColor: DesignSystem.Colors.dark01,
+                    backgroundColor: DesignSystem.Colors.white
+                )
             }
             .padding(.bottom, 100)
         }
@@ -44,18 +48,6 @@ private extension GetStartedView {
             .foregroundStyle(DesignSystem.Colors.white)
             .font(DesignSystem.Typography.title3Medium)
             .multilineTextAlignment(.center)
-    }
-
-    func button() -> some View {
-        ZStack {
-            Rectangle()
-                .frame(width: 300, height: 48)
-                .foregroundStyle(DesignSystem.Colors.white)
-                .cornerRadius(DesignSystem.Corners.medium)
-            Text("Get started")
-                .foregroundStyle(DesignSystem.Colors.dark01)
-                .font(DesignSystem.Typography.calloutRegular)
-        }
     }
 }
 
